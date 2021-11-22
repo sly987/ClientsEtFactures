@@ -9,18 +9,15 @@ public class Facture
 	private boolean reglementFacture;
 	private String nom;
 	
-	public Facture(int montant, String nom)
+	public Facture(int montant)
 	{
 		montantFacture  = montant;
-		reglementFacture =false;
-		this.nom = nom ;
 	}
 	
-	public Facture(int montant, String nom, boolean reglement)
+	public Facture(int montant, boolean reglement)
 	{
 		montantFacture  = montant;
 		reglementFacture = reglement;
-		this.nom = nom;
 	}
 	public Facture(int montant, String nom, boolean reglement, LocalDate date )
 	{
