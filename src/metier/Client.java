@@ -3,11 +3,10 @@ package metier;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Client
 {
 	private String nom;
-	List<Facture> list = new ArrayList<>();
+	private List<Facture> list = new ArrayList<>();
 	
 	/** 
 	 * Crée un client.
@@ -51,6 +50,20 @@ public class Client
 		list.add(f);
 		return f ;
 	}
+
+	/**
+	 * Créé une facture en précisant si elle est reglée.
+	 * @param montant Le montant de la facture.
+	 * @param reglée Vrai si la facture est reglée.
+	 * @return la facture créée.
+	 */
+	
+	public Facture createFacture(int montant, boolean reglee)
+	{
+		Facture f = new Facture(montant, reglee, this);
+		list.add(f);
+		return f;
+	}	
 	
 	/**
 	 * Retourne une copie de la liste des factures du client. 
@@ -77,19 +90,6 @@ public class Client
 		return m;
 	}
 
-	/**
-	 * Créé une facture en précisant si elle est reglée.
-	 * @param montant Le montant de la facture.
-	 * @param reglée Vrai si la facture est reglée.
-	 * @return la facture créée.
-	 */
-	
-	public Facture createFacture(int montant, boolean reglee)
-	{
-		Facture f = new Facture(montant, reglee, this);
-		list.add(f);
-		return f;
-	}	
 	
 	/**
 	 * Retourne la liste des factures reglées. 
@@ -103,7 +103,9 @@ public class Client
 		{
 			Facture f = new Facture(list.get(i));
 			if(f.estReglee())
+			{
 				l.add(f);
+			}
 		}
 		return l;
 	}
