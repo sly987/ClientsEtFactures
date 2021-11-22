@@ -47,7 +47,7 @@ public class Facture
 	
 	public int getMontant()
 	{
-		return montantFacture;
+		return this.montantFacture;
 	}
 
 	/**
@@ -57,7 +57,7 @@ public class Facture
 	
 	public boolean estReglee()
 	{
-		return reglementFacture;
+		return this.reglementFacture;
 		
 	}
 
@@ -68,8 +68,8 @@ public class Facture
 	
 	public LocalDate getDate()
 	{
-		
-		return LocalDate.now();
+		date = LocalDate.now();
+		return date;
 	}
 
 	/**
