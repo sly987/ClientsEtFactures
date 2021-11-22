@@ -3,8 +3,11 @@ package metier;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Client
 {
+	private String nom;
+	
 	/** 
 	 * Crée un client.
 	 * @param nom le nom du client. 
@@ -12,6 +15,7 @@ public class Client
 	
 	public Client(String nom)
 	{
+		this.setNom(nom);
 	}
 
 	/**
@@ -21,7 +25,7 @@ public class Client
 	
 	public String getNom()
 	{
-		return null;
+		return nom;
 	}
 	
 	/**
@@ -31,6 +35,7 @@ public class Client
 	
 	public void setNom(String nom)
 	{
+		this.nom = nom;
 	}
 	
 	/**
