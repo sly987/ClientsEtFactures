@@ -66,10 +66,7 @@ public class Facture
 	
 	public boolean estReglee()
 	{
-		if(reglementFacture)
-			return true;
-		else
-			return false;
+		return this.reglementFacture;
 		
 	}
 
