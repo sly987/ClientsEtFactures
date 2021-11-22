@@ -6,7 +6,7 @@ public class Facture
 {
 	private int montantFacture;
 	private LocalDate date;
-	private boolean reglementFacture;
+	private boolean reglementFacture =false;
 	private Client client;
 
 	
@@ -14,6 +14,7 @@ public class Facture
 	{
 		montantFacture  = montant;
 		this.client = client;
+		date = LocalDate.now();
 	}
 	
 	public Facture(int montant, boolean reglement, Client client)
@@ -21,6 +22,7 @@ public class Facture
 		montantFacture  = montant;
 		reglementFacture = reglement;
 		this.client = client;
+		date = LocalDate.now();
 	}
 	public Facture(int montant, boolean reglement, Client client, LocalDate date )
 	{
@@ -37,7 +39,7 @@ public class Facture
 	public Client getClient()
 	{
 		
-		return null;
+		return client;
 	}
 
 	/**
@@ -68,7 +70,7 @@ public class Facture
 	
 	public LocalDate getDate()
 	{
-		date = LocalDate.now();
+		
 		return date;
 	}
 
