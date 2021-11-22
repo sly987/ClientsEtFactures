@@ -87,7 +87,7 @@ public class Client
 		int m = 0;
 		for(int i = 0; i<list.size(); i++)
 		{
-			m =+ (list.get(i)).getMontant();
+			m = m + (list.get(i)).getMontant();
 		}
 		return m;
 	}
