@@ -31,6 +31,13 @@ public class Facture
 		this.client = client;
 		this.date = date;
 	}
+	public Facture(Facture f )
+	{
+		montantFacture  = f.montantFacture;
+		reglementFacture = f.reglementFacture;
+		this.client = f.client;
+		this.date = f.date;
+	}
 	/**
 	 * Retourne le client à qui est adressée la facture..
 	 * @return le client.
@@ -90,8 +97,8 @@ public class Facture
 	
 	public Facture copie()
 	{
-
+		Facture f = new Facture(this);
 		
-		return null;
+		return f;
 	}
 }

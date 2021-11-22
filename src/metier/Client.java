@@ -69,7 +69,12 @@ public class Client
 	
 	public int sommeMontants()
 	{
-		return 0;
+		int m = 0;
+		for(int i = 0; i<list.size(); i++)
+		{
+			m =+ (list.get(i)).getMontant();
+		}
+		return m;
 	}
 
 	/**
@@ -93,7 +98,14 @@ public class Client
 
 	public List<Facture> facturesReglees()
 	{
-		return null;
+		List<Facture> l = new ArrayList<>();
+		for(int i = 0; i<list.size(); i++)
+		{
+			Facture f = new Facture(list.get(i));
+			if(f.estReglee())
+				l.add(f);
+		}
+		return l;
 	}
 	
 
