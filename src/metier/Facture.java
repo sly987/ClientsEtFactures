@@ -7,7 +7,28 @@ public class Facture
 	private int montantFacture;
 	private LocalDate date;
 	private boolean reglementFacture;
-	private Client client;
+	private String nom;
+	
+	public Facture(int montant, String nom)
+	{
+		montantFacture  = montant;
+		reglementFacture =false;
+		this.nom = nom ;
+	}
+	
+	public Facture(int montant, String nom, boolean reglement)
+	{
+		montantFacture  = montant;
+		reglementFacture = reglement;
+		this.nom = nom;
+	}
+	public Facture(int montant, String nom, boolean reglement, LocalDate date )
+	{
+		montantFacture  = montant;
+		reglementFacture = reglement;
+		this.nom = nom;
+		this.date = date;
+	}
 	/**
 	 * Retourne le client à qui est adressée la facture..
 	 * @return le client.
@@ -15,6 +36,7 @@ public class Facture
 	
 	public Client getClient()
 	{
+		Client client = new Client(nom);
 		return client;
 	}
 
@@ -46,7 +68,8 @@ public class Facture
 	
 	public LocalDate getDate()
 	{
-		return date;
+		
+		return LocalDate.now();
 	}
 
 	/**
@@ -66,7 +89,7 @@ public class Facture
 	public Facture copie()
 	{
 		Facture f = new Facture();
-		;
+		
 		return null;
 	}
 }
