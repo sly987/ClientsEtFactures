@@ -88,7 +88,7 @@ public class Facture
 	
 	public Facture copie()
 	{
-		Facture f = new Facture();
+
 		
 		return null;
 	}
