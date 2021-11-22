@@ -7,23 +7,26 @@ public class Facture
 	private int montantFacture;
 	private LocalDate date;
 	private boolean reglementFacture;
+	private Client client;
 
 	
-	public Facture(int montant)
+	public Facture(int montant, Client client)
 	{
 		montantFacture  = montant;
+		this.client = client;
 	}
 	
-	public Facture(int montant, boolean reglement)
+	public Facture(int montant, boolean reglement, Client client)
 	{
 		montantFacture  = montant;
 		reglementFacture = reglement;
+		this.client = client;
 	}
-	public Facture(int montant, boolean reglement, LocalDate date )
+	public Facture(int montant, boolean reglement, Client client, LocalDate date )
 	{
 		montantFacture  = montant;
 		reglementFacture = reglement;
-
+		this.client = client;
 		this.date = date;
 	}
 	/**
