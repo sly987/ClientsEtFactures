@@ -7,6 +7,7 @@ public class Client
 {
 	private String nom;
 	private List<Facture> list = new ArrayList<>();
+	private static List<Client> listClient = new ArrayList<>();
 	
 	/** 
 	 * Crée un client.
@@ -16,6 +17,7 @@ public class Client
 	public Client(String nom)
 	{
 		this.setNom(nom);
+		listClient.add(this);
 	}
 
 	/**
@@ -117,7 +119,7 @@ public class Client
 	 */
 	public static List<Client> tous()
 	{
-		return null;
+		return listClient;
 	}
 	
 	/**
