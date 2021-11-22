@@ -7,7 +7,7 @@ public class Facture
 	private int montantFacture;
 	private LocalDate date;
 	private boolean reglementFacture;
-	private String nom;
+
 	
 	public Facture(int montant)
 	{
@@ -19,11 +19,11 @@ public class Facture
 		montantFacture  = montant;
 		reglementFacture = reglement;
 	}
-	public Facture(int montant, String nom, boolean reglement, LocalDate date )
+	public Facture(int montant, boolean reglement, LocalDate date )
 	{
 		montantFacture  = montant;
 		reglementFacture = reglement;
-		this.nom = nom;
+
 		this.date = date;
 	}
 	/**
@@ -33,8 +33,8 @@ public class Facture
 	
 	public Client getClient()
 	{
-		Client client = new Client(nom);
-		return client;
+		
+		return null;
 	}
 
 	/**
