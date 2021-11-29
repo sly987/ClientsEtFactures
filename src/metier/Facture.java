@@ -10,85 +10,35 @@ public class Facture
 	private Client client;
 
 	
-	public Facture(int montant, Client client)
+	public Facture(int montant, Client client)throws IllegalArgumentException
 	{
-		try
-		{
-			if (montant>=0)
-			{
-				montantFacture  = montant;
-				this.client = client;
-				date = LocalDate.now();
-			}
-			else 
-			{
-				throw new IllegalArgumentException();
-			}
-			
-		}
-		catch (IllegalArgumentException e)
-		{
-			System.out.println(e);
-		}
 		
+		montantFacture  = montant;
+		this.client = client;
+		date = LocalDate.now();
 	}
 	
-	public Facture(int montant, boolean reglement, Client client)
+	public Facture(int montant, boolean reglement, Client client) throws IllegalArgumentException
 	{
-		try
-		{
-			if(montant>=0)
-			{
-				montantFacture  = montant;
-				reglementFacture = reglement;
-				this.client = client;
-				date = LocalDate.now();
-			}
-			else 
-			{
-				throw new IllegalArgumentException();
-			}
-			
-		}
-		catch(IllegalArgumentException e)
-		{
-			System.out.println(e);
-		}
+	
+		montantFacture  = montant;
+		reglementFacture = reglement;
+		this.client = client;
+		date = LocalDate.now();
 	}
-	public Facture(int montant, boolean reglement, Client client, LocalDate date )
+	public Facture(int montant, boolean reglement, Client client, LocalDate date )throws IllegalArgumentException
 	{
-		try
-		{
-			if(montant >=0)
-			{
-				montantFacture  = montant;
-				reglementFacture = reglement;
-				this.client = client;
-				this.date = date;
-			}
-			else 
-			{
-				throw new IllegalArgumentException();
-			}
-		}
-		catch(IllegalArgumentException e)
-		{
-			System.out.println(e);
-		}
+		montantFacture  = montant;
+		reglementFacture = reglement;
+		this.client = client;
+		this.date = date;
 	}
-	public Facture(Facture f )
+	public Facture(Facture f )throws IllegalArgumentException
 	{
-		try 
-		{
-			montantFacture  = f.montantFacture;
-			reglementFacture = f.reglementFacture;
-			this.client = f.client;
-			this.date = f.date;
-		}
-		catch(IllegalArgumentException e)
-		{
-			System.out.println(e);
-		}
+		montantFacture  = f.montantFacture;
+		reglementFacture = f.reglementFacture;
+		this.client = f.client;
+		this.date = f.date;
 	}
 	/**
 	 * Retourne le client à qui est adressée la facture..
