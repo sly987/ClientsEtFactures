@@ -77,7 +77,15 @@ public class Client
 	{
 	
 		List<Facture> l = new ArrayList<>();
-		l = list;
+		Facture f;
+		for(int i =0; i<list.size(); i++)
+		{
+			f = list.get(i);
+			if(f.getClient() == this)
+			{
+				l.add(f);
+			}
+		}
 		return l;
 	}
 	
