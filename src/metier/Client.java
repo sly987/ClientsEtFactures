@@ -76,7 +76,8 @@ public class Client
 	public List<Facture> getFactures()
 	{
 	
-		List<Facture> l = list;
+		List<Facture> l = new ArrayList<>();
+		l = list;
 		return l;
 	}
 	
