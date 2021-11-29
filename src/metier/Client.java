@@ -126,6 +126,10 @@ public class Client
 	{
 		return listClient;
 	}
+	public List<Facture> fact()
+	{
+		return list;
+	}
 	
 	/**
 	 * Supprime le client.
