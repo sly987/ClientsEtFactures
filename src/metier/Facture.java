@@ -99,6 +99,6 @@ public class Facture
 	
 	public Facture copie()
 	{	
-		return client.createFacture(getMontant());
+		return client.createFacture(this.getMontant());
 	}
 }
