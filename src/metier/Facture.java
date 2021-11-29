@@ -14,11 +14,19 @@ public class Facture
 	{
 		try
 		{
-			montantFacture  = montant;
-			this.client = client;
-			date = LocalDate.now();
+			if (montant>=0)
+			{
+				montantFacture  = montant;
+				this.client = client;
+				date = LocalDate.now();
+			}
+			else 
+			{
+				throw new IllegalArgumentException();
+			}
+			
 		}
-		catch (Exception e)
+		catch (IllegalArgumentException e)
 		{
 			System.out.println(e);
 		}
@@ -29,10 +37,18 @@ public class Facture
 	{
 		try
 		{
-			montantFacture  = montant;
-			reglementFacture = reglement;
-			this.client = client;
-			date = LocalDate.now();
+			if(montant>=0)
+			{
+				montantFacture  = montant;
+				reglementFacture = reglement;
+				this.client = client;
+				date = LocalDate.now();
+			}
+			else 
+			{
+				throw new IllegalArgumentException();
+			}
+			
 		}
 		catch(IllegalArgumentException e)
 		{
@@ -43,10 +59,17 @@ public class Facture
 	{
 		try
 		{
-			montantFacture  = montant;
-			reglementFacture = reglement;
-			this.client = client;
-			this.date = date;
+			if(montant >=0)
+			{
+				montantFacture  = montant;
+				reglementFacture = reglement;
+				this.client = client;
+				this.date = date;
+			}
+			else 
+			{
+				throw new IllegalArgumentException();
+			}
 		}
 		catch(IllegalArgumentException e)
 		{
