@@ -5,9 +5,10 @@ import java.util.List;
 
 public class Client
 {
+	private static List<Client> listClient = new ArrayList<>();
 	private String nom;
 	private List<Facture> list = new ArrayList<>();
-	private static List<Client> listClient = new ArrayList<>();
+	
 	
 	/** 
 	 * Crée un client.
