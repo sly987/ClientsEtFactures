@@ -76,16 +76,8 @@ public class Client
 	public List<Facture> getFactures()
 	{
 	
-		List<Facture> l = new ArrayList<>();
-		Facture f;
-		for(int i =0; i<list.size(); i++)
-		{
-			f = list.get(i);
-			if(f.getClient() == this)
-			{
-				l.add(f);
-			}
-		}
+		List<Facture> l = new ArrayList<>(this.list);
+		
 		return l;
 	}
 	
@@ -141,8 +133,6 @@ public class Client
 	
 	public void delete()
 	{
-		this.setNom(null);
-		System.gc();
-				
+		listClient.remove(this);
 	}
 }
