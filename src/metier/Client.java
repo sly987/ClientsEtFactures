@@ -142,6 +142,7 @@ public class Client
 	public void delete()
 	{
 		this.setNom(null);
+		System.gc();
 				
 	}
 }
