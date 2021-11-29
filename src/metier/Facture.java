@@ -98,9 +98,7 @@ public class Facture
 	 */
 	
 	public Facture copie()
-	{
-		Facture f = new Facture(this);
-		
-		return f;
+	{	
+		return client.createFacture(getMontant());
 	}
 }
