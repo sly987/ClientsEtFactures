@@ -58,7 +58,7 @@ public class Client
 		catch(IllegalArgumentException e)
 		{
 			System.out.println( e.getMessage());
-			return null;
+
 		}
 	}
 
@@ -80,7 +80,6 @@ public class Client
 		catch(IllegalArgumentException e)
 		{
 			System.out.println( e.getMessage());
-			return null;
 		}
 	}	
 	
