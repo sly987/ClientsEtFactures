@@ -57,7 +57,10 @@ public class Client
 		}
 		catch(IllegalArgumentException e)
 		{
+<<<<<<< HEAD
 			System.out.println(e.getMessage());
+=======
+>>>>>>> parent of 06c7b7e (Update Client.java)
 			return null;
 		}
 	}
@@ -79,7 +82,10 @@ public class Client
 		}
 		catch(IllegalArgumentException e)
 		{
+<<<<<<< HEAD
 			System.out.println(e.getMessage());
+=======
+>>>>>>> parent of 06c7b7e (Update Client.java)
 			return null;
 		}
 	}	
