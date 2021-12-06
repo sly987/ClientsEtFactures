@@ -47,12 +47,19 @@ public class Client
 	 * @return la facture créée.
 	 */
 	
-	public Facture createFacture(int montant)throws IllegalArgumentException
+	public Facture createFacture(int montant)
 	{
-		Facture f = new Facture(montant, this);
-		list.add(f);
-		return f ;
-
+		try
+		{
+			Facture f = new Facture(montant, this);
+			list.add(f);
+			return f ;
+		}
+		catch(IllegalArgumentException e)
+		{
+			System.out.println( e.getMessage());
+			return null;
+		}
 	}
 
 	/**
@@ -62,11 +69,19 @@ public class Client
 	 * @return la facture créée.
 	 */
 	
-	public Facture createFacture(int montant, boolean reglee)throws IllegalArgumentException
+	public Facture createFacture(int montant, boolean reglee)
 	{
-		Facture f = new Facture(montant, reglee, this);
-		list.add(f);
-		return f;
+		try
+		{
+			Facture f = new Facture(montant, reglee, this);
+			list.add(f);
+			return f;
+		}
+		catch(IllegalArgumentException e)
+		{
+			System.out.println( e.getMessage());
+			return null;
+		}
 	}	
 	
 	/**
@@ -76,7 +91,9 @@ public class Client
 
 	public List<Facture> getFactures()
 	{
+	
 		List<Facture> l = new ArrayList<>(this.list);
+		
 		return l;
 	}
 	
