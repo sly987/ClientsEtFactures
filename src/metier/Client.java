@@ -47,18 +47,13 @@ public class Client
 	 * @return la facture créée.
 	 */
 	
-	public Facture createFacture(int montant)
+	public Facture createFacture(int montant)throws IllegalArgumentException
 	{
-		try
-		{
+	
 			Facture f = new Facture(montant, this);
 			list.add(f);
 			return f ;
-		}
-		catch(IllegalArgumentException e)
-		{
-			System.out.println("Le montant d'une facture ne peut pas être négatif.");
-		}
+
 	}
 
 	/**
@@ -68,18 +63,11 @@ public class Client
 	 * @return la facture créée.
 	 */
 	
-	public Facture createFacture(int montant, boolean reglee)
+	public Facture createFacture(int montant, boolean reglee)throws IllegalArgumentException
 	{
-		try
-		{
-			Facture f = new Facture(montant, reglee, this);
-			list.add(f);
-			return f;
-		}
-		catch(IllegalArgumentException e)
-		{
-			System.out.println("Le montant d'une facture ne peut pas être négatif.");
-		}
+		Facture f = new Facture(montant, reglee, this);
+		list.add(f);
+		return f;
 	}	
 	
 	/**
