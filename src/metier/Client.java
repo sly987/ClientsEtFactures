@@ -49,10 +49,9 @@ public class Client
 	
 	public Facture createFacture(int montant)throws IllegalArgumentException
 	{
-	
-			Facture f = new Facture(montant, this);
-			list.add(f);
-			return f ;
+		Facture f = new Facture(montant, this);
+		list.add(f);
+		return f ;
 
 	}
 
@@ -77,9 +76,7 @@ public class Client
 
 	public List<Facture> getFactures()
 	{
-	
 		List<Facture> l = new ArrayList<>(this.list);
-		
 		return l;
 	}
 	
