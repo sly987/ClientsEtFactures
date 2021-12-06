@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import metier.Client;
 import metier.Facture;
+import metier.IllegalArgumentException;
 
 class TestClient
 {

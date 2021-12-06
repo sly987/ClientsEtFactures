@@ -124,7 +124,7 @@ public class Facture
 	 * @return une copie de la facture.
 	 */
 	
-	public Facture copie()
+	public Facture copie()throws IllegalArgumentException
 	{	
 		return client.createFacture(this.getMontant());
 	}
