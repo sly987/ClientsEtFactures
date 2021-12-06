@@ -57,8 +57,7 @@ public class Client
 		}
 		catch(IllegalArgumentException e)
 		{
-			System.out.println("Le montant d'une facture ne peut pas être négatif.");
-			return null;
+			throw new IllegalArgumentException();
 		}
 	}
 
@@ -79,8 +78,8 @@ public class Client
 		}
 		catch(IllegalArgumentException e)
 		{
-			System.out.println("Le montant d'une facture ne peut pas être négatif.");
-			return null;
+			throw new IllegalArgumentException();
+			
 		}
 	}	
 	
